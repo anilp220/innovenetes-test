@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
       .then((result: any[]) => {
         if (result.length) {
           this.repos = [...result]
-          console.log(this.repos)
         } else {
           this.errorMsg = 'Not Found'
         }
