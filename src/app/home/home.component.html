@@ -1,10 +1,33 @@
 <div class="container">
   <div class="input-container">
-    <div class="input-box">
-      <p>Enter github username</p>
-      <input type="text" [(ngModel)]="username">
-    </div>
-    <button (click)="onSubmit()">Submit</button>
+    <form (ngSubmit)="onSubmit()">
+      <div class="input-box">
+        <p>Enter github username</p>
+        <input type="text" name="username" [(ngModel)]="username">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </div>
   <span class="error" *ngIf="errorMsg">{{errorMsg}}</span>
+
+  <div class="repo-container" *ngIf="repos.length">
+    <table>
+      <tr>
+        <th>Repo name</th>
+        <th>Language</th>
+        <th>Description</th>
+      </tr>
+      <tr *ngFor="let repo of repos">
+        <td>
+          {{repo.name}}
+        </td>
+        <td>
+          {{repo.language}}
+        </td>
+        <td>
+          {{repo.description}}
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>

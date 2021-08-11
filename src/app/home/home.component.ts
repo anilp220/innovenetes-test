@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
+    this.errorMsg = '';
+    this.repos = [];
     this.homeService.getUser(this.username)
       .then((result: any[]) => {
         if (result.length) {
