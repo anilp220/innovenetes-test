@@ -1,0 +1,36 @@
+.container {
+  width: 50%;
+  margin: auto;
+  .input-container {
+    border: 1px solid;
+    padding: 10px;
+    .input-box {
+      display: flex;
+      p {
+        margin-right: 20px;
+      }
+      input {
+        width: 40%;
+        border: 0;
+        border-bottom: 1px solid;
+      }
+      input:focus {
+        outline: none;
+      }
+    }
+    span {
+      display: block;
+      color: red;
+    }
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    button:hover {
+      background: #e2e2e5;
+    }
+  }
+}
