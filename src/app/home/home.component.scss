@@ -18,10 +18,6 @@
         outline: none;
       }
     }
-    span {
-      display: block;
-      color: red;
-    }
     button {
       border: none;
       background: transparent;
@@ -32,5 +28,10 @@
     button:hover {
       background: #e2e2e5;
     }
+  }
+  .error {
+    display: block;
+    color: red;
+    text-align: center;
   }
 }
